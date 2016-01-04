@@ -1,0 +1,17 @@
+<ion-view title="My Expenses">
+<ion-content>
+<ion-list>
+<ion-item ng-repeat="expense in expenses"
+type="item-text-wrap"><h4><b>{{expense.document.expense}}</b></h4>
+<span class="badge badge-balanced">{{expense.document.amount|currency:"Ush ":0}}</span>
+{{expense.document.date| date :'dd/MMM/yyyy'}}
+</ion-item>
+
+</ion-list>
+<div class="card assertive">
+  <div class="item item-text-wrap">
+    Total Spent <span class="badge badge-positive">{{getTotal()|currency:"Ush ":0}}</span>
+  </div>
+</div>
+</ion-content>
+</ion-view>
